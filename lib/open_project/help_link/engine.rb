@@ -17,8 +17,6 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #++
 
-# Prevent load-order problems in case openproject-plugins is listed after a plugin in the Gemfile
-# or not at all
 require 'open_project/plugins'
 
 require 'rails/engine'
@@ -36,7 +34,7 @@ module OpenProject::HelpLink
 
     register 'openproject-help_link',
              :author_url => 'http://finn.de',
-             :requires_openproject => '>= 3.0.0',
+             :requires_openproject => '>= 4.0.0',
              :settings => settings do
 
       Redmine::MenuManager.map :top_menu do |menu|
